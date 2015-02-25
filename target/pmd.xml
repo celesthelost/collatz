@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.2.3" timestamp="2015-02-25T11:43:23.000">
+<file name="C:\Users\dreyerj2\workspacecollatz\collatz\src\main\java\edu\nku\collatz\LongestChain.java">
+<violation beginline="28" endline="30" begincolumn="13" endcolumn="13" rule="EmptyIfStmt" ruleset="Empty Code" package="edu.nku.collatz" class="LongestChain" method="FindLongestChain" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.2.3/pmd-java/rules/java/empty.html#EmptyIfStmt" priority="3">
+Avoid empty if statements
+</violation>
+</file>
+</pmd>

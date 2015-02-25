@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Collatz.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">nku</a> &gt; <a href="index.source.html" class="el_package">edu.nku.collatz</a> &gt; <span class="el_source">Collatz.java</span></div><h1>Collatz.java</h1><pre class="source lang-java linenums">package edu.nku.collatz;
+import java.util.Iterator;
+
+
+public class Collatz implements Iterator&lt;Double&gt;{
+
+	private double startNumber;
+	
+	private double currentNumber;
+	
+	public Collatz(double startNumber)
+<span class="fc" id="L12">	{</span>
+<span class="fc" id="L13">	setStartNumber(startNumber);</span>
+<span class="fc" id="L14">	}</span>
+	
+	
+	public boolean hasNext() {
+		// TODO Auto-generated method stub
+<span class="fc bfc" id="L19" title="All 2 branches covered.">		return currentNumber &gt; 1;</span>
+	}
+
+	public Double next() {
+		
+<span class="fc bfc" id="L24" title="All 2 branches covered.">		if(currentNumber % 2 ==0)</span>
+		{
+<span class="fc" id="L26">			return currentNumber = currentNumber / 2;</span>
+		}
+		else
+		{
+<span class="fc" id="L30">			return currentNumber = 3 * currentNumber +1;</span>
+		}
+	}
+
+
+	public double getStartNumber() {
+<span class="nc" id="L36">		return startNumber;</span>
+	}
+
+	public void setStartNumber(double startNumber) {
+<span class="fc" id="L40">		this.startNumber = startNumber;</span>
+<span class="fc" id="L41">		this.currentNumber= this.startNumber;</span>
+<span class="fc" id="L42">	}</span>
+
+	public void remove() {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L47">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.0.201403182114</span></div></body></html>
