@@ -2,15 +2,15 @@ package edu.nku.collatz;
 import java.util.Iterator;
 
 
-public class Collatz implements Iterator<Double>{
+public class Collatz implements Iterator<Long>{
 
-	private double startNumber;
+	private long startNumber;
 	
-	private double currentNumber;
+	private long currentNumber;
 	
-	public Collatz(double startNumber)
+	public Collatz(long startNumber)
 	{
-	setStartNumber(startNumber);
+		setStartNumber(startNumber);
 	}
 	
 	
@@ -19,7 +19,7 @@ public class Collatz implements Iterator<Double>{
 		return currentNumber > 1;
 	}
 
-	public Double next() {
+	public Long next() {
 		
 		if(currentNumber % 2 ==0)
 		{
@@ -32,11 +32,11 @@ public class Collatz implements Iterator<Double>{
 	}
 
 
-	public double getStartNumber() {
+	public long getStartNumber() {
 		return startNumber;
 	}
 
-	public void setStartNumber(double startNumber) {
+	public void setStartNumber(long startNumber) {
 		this.startNumber = startNumber;
 		this.currentNumber= this.startNumber;
 	}

@@ -21,8 +21,8 @@ public class collatzIntegrationTest {
 	public void longestchain1000000() 
 	{
 		longestChain= new LongestChain(1000000);
-		double maxLimit = longestChain.FindLongestChain();
-		assertThat(maxLimit, is(equalTo(837799.0)));
+		long maxLimit = longestChain.FindLongestChain();
+		assertThat(maxLimit, is(equalTo(837799L)));
 
 	}
 	
